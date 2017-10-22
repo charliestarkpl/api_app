@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Api Rails app for counting letters in start-up.house website, with subpages.
 
-Things you may want to cover:
+Send a string parameter in an GET request to an api/letters_count controller:
+GET http://api-app.address/api/letters_count?query=a
 
-* Ruby version
+In response you'll' get JSON, with current date and letters count, as below:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+{
+  response: {
+     current_date: 2007-11-19,
+     letters_count: 9348,
+     query: 'a'
+  }
+}
+```
